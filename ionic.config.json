@@ -1,0 +1,7 @@
+{
+  "name": "SoulDEV14Pagev2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
