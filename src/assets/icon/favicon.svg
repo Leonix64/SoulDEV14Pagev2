@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Fondo con gradiente — igual que el avatar del hero -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04668a"/>
+      <stop offset="100%" stop-color="#0a4d6a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Iniciales HG -->
+  <text
+    x="16"
+    y="22"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13.5"
+    font-weight="700"
+    text-anchor="middle"
+    fill="white"
+    letter-spacing="-0.8"
+  >HG</text>
+</svg>
