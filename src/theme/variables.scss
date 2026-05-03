@@ -1,2 +1,16 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+// Design tokens — light "Clean Precision" theme
+:root {
+  --c-bg: #f8f6f2;
+  --c-surface: #ffffff;
+  --c-surface-alt: #f0ede7;
+  --c-border: rgba(20, 18, 14, 0.1);
+  --c-text: #1a1714;
+  --c-muted: rgba(26, 23, 20, 0.5);
+  --c-accent: #04668a;
+  --c-accent-dim: rgba(4, 102, 138, 0.08);
+  --c-accent-light: rgba(4, 102, 138, 0.12);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --nav-h: 64px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

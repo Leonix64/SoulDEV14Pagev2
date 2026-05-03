@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about":       "About",
+    "experience":  "Experience",
+    "projects":    "Projects",
+    "stack":       "Stack",
+    "contact":     "Contact",
+    "download_cv": "Download CV"
+  },
+
+  "hero": {
+    "greeting":   "Hi, I'm",
+    "name":       "Hugo Gurrola",
+    "roles": [
+      "Back-End Developer",
+      "Data Analyst",
+      "Java Engineer",
+      "Database Specialist"
+    ],
+    "subtitle":   "Software Engineer specialized in scalable back-end systems with Java, Python, and MySQL from Durango, Mexico.",
+    "cta_projects": "View Projects",
+    "cta_contact":  "Get in Touch",
+    "open_to_work": "Available for projects"
+  },
+
+  "about": {
+    "section_title": "About Me",
+    "heading": "My Story",
+    "paragraph": "Software Engineer graduated from UNIPOLI with experience in back-end development, data analysis, and scalable architectures. I specialize in Java with Spring Boot and Python, MySQL optimization, and large-scale data analysis. I build robust systems with clean code and efficient database design.",
+    "location":  "Durango, Mexico",
+    "status":    "Open to full-time & freelance",
+    "github":    "github.com/HugoGurrola",
+    "email":     "hugogurrola49@gmail.com",
+    "stat_experience": "years of experience",
+    "stat_projects":   "projects completed",
+    "stat_tech":       "technologies mastered"
+  },
+
+  "experience": {
+    "section_title": "Experience",
+    "heading": "My Work",
+    "types": {
+      "freelance":   "Freelance",
+      "full-time":   "Full-time",
+      "internship":  "Internship"
+    },
+    "worknest": {
+      "title": "Back-End Developer",
+      "desc1": "Designed and developed scalable architectures with Spring Boot and Goliant.",
+      "desc2": "Managed and optimized MySQL database, reducing query response times.",
+      "desc3": "Documented processes and managed meetings under Scrum methodology.",
+      "desc4": "Contributed to the functional design of the e-commerce platform."
+    },
+    "helguera": {
+      "title": "Back-End Developer",
+      "desc1": "Built back-end for e-commerce system with full inventory management and admin panel.",
+      "desc2": "Designed and implemented relational database schema with MySQL.",
+      "desc3": "Developed REST APIs for product catalog, orders, and user management."
+    },
+    "donponpeyo": {
+      "title": "Back-End Developer",
+      "desc1": "Developed bakery management system with MySQL for inventory and sales tracking.",
+      "desc2": "Modeled business processes and implemented Spring Boot REST services.",
+      "desc3": "Built reporting module for daily sales and stock levels."
+    }
+  },
+
+  "education": {
+    "section_title": "Education",
+    "unipoli": {
+      "degree": "B.S. in Software Engineering"
+    }
+  },
+
+  "projects": {
+    "section_title": "Projects",
+    "heading": "My Projects",
+    "filter": {
+      "all":       "All",
+      "fullstack": "Full Stack",
+      "web":       "Web",
+      "mobile":    "Mobile",
+      "ai":        "AI / ML",
+      "tools":     "Tools",
+      "data":      "Data"
+    },
+    "cta_github":    "View more on GitHub",
+    "private_repo":  "Private · NDA",
+    "worknest": {
+      "title": "WorkNest Platform",
+      "desc":  "Scalable e-commerce platform built with Spring Boot, Goliant, and optimized MySQL. Handles inventory, user management, and order processing."
+    },
+    "rainflow": {
+      "title": "Rainflow Analytics",
+      "desc":  "Climate data analysis pipeline for predictive models. Processes geographic data with Python and stores results in MySQL for model training."
+    },
+    "helguera": {
+      "title": "Helguera E-Commerce",
+      "desc":  "Complete e-commerce system with inventory management, relational database design, and admin panel built with Full Stack technologies."
+    },
+    "donponpeyo": {
+      "title": "Don Ponpeyo",
+      "desc":  "Bakery management system for inventory and process control. Spring Boot back-end with MySQL modeling and daily reporting features."
+    }
+  },
+
+  "stack": {
+    "section_title": "Tech Stack",
+    "heading": "My Arsenal",
+    "backend":   "Back-End",
+    "databases": "Databases",
+    "data":      "Data & Analysis",
+    "devops":    "DevOps & Tools"
+  },
+
+  "contact": {
+    "section_title":  "Contact",
+    "heading": "Let's Talk",
+    "subtitle":       "Let's build something together.",
+    "email_label":    "Email",
+    "phone_label":    "Phone",
+    "github_label":   "GitHub",
+    "location_label": "Location",
+    "location_value": "Durango, Mexico",
+    "availability":   "Available for remote & on-site roles",
+    "cta_email":      "Send an email"
+  },
+
+  "footer": {
+    "built_with": "Built with Angular & Ionic",
+    "rights":     "Hugo Gurrola. All rights reserved."
+  }
+}

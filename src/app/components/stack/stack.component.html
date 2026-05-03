@@ -1,0 +1,29 @@
+<section id="stack" class="stack">
+  <div class="stack__inner">
+
+    <div class="section-heading">
+      <span class="section-heading__num">03</span>
+      <div class="section-heading__right">
+        <div class="section-heading__rule"></div>
+        <span class="section-heading__label">{{ 'stack.section_title' | translate }}</span>
+      </div>
+    </div>
+    <h2 class="section-title">{{ 'stack.heading' | translate }}</h2>
+
+    <!-- 4-column GLASSHAVEN grid: number → divider → category → skill list -->
+    <div class="stack__categories">
+      <div class="stack__category" *ngFor="let cat of stack; let i = index">
+        <div class="stack__cat-num">{{ (i + 1).toString().padStart(2, '0') }}</div>
+        <div class="stack__cat-divider"></div>
+        <h3 class="stack__cat-title">{{ cat.titleKey | translate }}</h3>
+        <ul class="stack__skill-list">
+          <li class="stack__skill-item" *ngFor="let skill of cat.skills">
+            <ion-icon [name]="skill.icon"></ion-icon>
+            <span>{{ skill.name }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>

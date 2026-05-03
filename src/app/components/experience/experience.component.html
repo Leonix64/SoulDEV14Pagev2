@@ -1,0 +1,53 @@
+<section id="experience" class="experience">
+  <div class="experience__inner">
+
+    <div class="section-heading">
+      <span class="section-heading__num">02</span>
+      <div class="section-heading__right">
+        <div class="section-heading__rule"></div>
+        <span class="section-heading__label">{{ 'experience.section_title' | translate }}</span>
+      </div>
+    </div>
+    <h2 class="section-title">{{ 'experience.heading' | translate }}</h2>
+
+    <!-- Lista editorial — completamente diferente al grid de cards -->
+    <div class="exp-list">
+      <div class="exp-item" *ngFor="let exp of experiences; let i = index">
+
+        <div class="exp-item__index">
+          {{ (i + 1).toString().padStart(2, '0') }}
+        </div>
+
+        <div class="exp-item__body">
+          <div class="exp-item__header">
+
+            <div class="exp-item__time">
+              <span class="exp-item__period">{{ exp.period }}</span>
+              <span class="exp-item__type">{{ 'experience.types.' + exp.type | translate }}</span>
+            </div>
+
+            <div class="exp-item__role">
+              <h3 class="exp-item__title">{{ exp.titleKey | translate }}</h3>
+              <div class="exp-item__company">
+                <span>{{ exp.company }}</span>
+                <span class="exp-item__dot">·</span>
+                <span>{{ exp.location }}</span>
+              </div>
+            </div>
+
+          </div>
+
+          <ul class="exp-item__desc">
+            <li *ngFor="let key of exp.descriptionKeys">{{ key | translate }}</li>
+          </ul>
+
+          <div class="exp-item__tags">
+            <span *ngFor="let tech of exp.technologies">{{ tech }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

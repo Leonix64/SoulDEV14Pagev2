@@ -1,0 +1,99 @@
+// Dark footer on a white site — provides visual closure and contrast
+.footer {
+  padding: 2.5rem 2rem;
+  background: #14213d;
+  border-top: none;
+}
+
+.footer__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
+
+// Brand block — name + role stacked
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.footer__role {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.footer__built {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.04em;
+
+  @media (max-width: 600px) { display: none; }
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__copy {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.03em;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    background var(--transition);
+
+  ion-icon { font-size: 1rem; }
+
+  &:hover {
+    border-color: rgba(4, 102, 138, 0.6);
+    color: #ffffff;
+    background: rgba(4, 102, 138, 0.25);
+  }
+}

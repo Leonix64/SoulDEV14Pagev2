@@ -1,0 +1,73 @@
+<section id="contact" class="contact">
+  <div class="contact__inner">
+
+    <div class="section-heading">
+      <span class="section-heading__num">05</span>
+      <div class="section-heading__right">
+        <div class="section-heading__rule"></div>
+        <span class="section-heading__label">{{ 'contact.section_title' | translate }}</span>
+      </div>
+    </div>
+    <h2 class="section-title">{{ 'contact.heading' | translate }}</h2>
+
+    <div class="contact__content">
+
+      <div class="contact__left">
+        <p class="contact__body">{{ 'contact.subtitle' | translate }}</p>
+        <p class="contact__availability">{{ 'contact.availability' | translate }}</p>
+        <a [href]="'mailto:' + email" class="btn-primary">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span>{{ 'contact.cta_email' | translate }}</span>
+        </a>
+      </div>
+
+      <div class="contact__links">
+
+        <a [href]="'mailto:' + email" class="contact-item">
+          <div class="contact-item__icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+          <div class="contact-item__text">
+            <span class="contact-item__label">{{ 'contact.email_label' | translate }}</span>
+            <span class="contact-item__value">{{ email }}</span>
+          </div>
+          <ion-icon name="arrow-forward" class="contact-item__arrow"></ion-icon>
+        </a>
+
+        <a [href]="'tel:' + phone" class="contact-item">
+          <div class="contact-item__icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="contact-item__text">
+            <span class="contact-item__label">{{ 'contact.phone_label' | translate }}</span>
+            <span class="contact-item__value">{{ phone }}</span>
+          </div>
+          <ion-icon name="arrow-forward" class="contact-item__arrow"></ion-icon>
+        </a>
+
+        <a [href]="github" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <div class="contact-item__icon">
+            <ion-icon name="logo-github"></ion-icon>
+          </div>
+          <div class="contact-item__text">
+            <span class="contact-item__label">{{ 'contact.github_label' | translate }}</span>
+            <span class="contact-item__value">github.com/HugoGurrola</span>
+          </div>
+          <ion-icon name="arrow-forward" class="contact-item__arrow"></ion-icon>
+        </a>
+
+        <div class="contact-item contact-item--static">
+          <div class="contact-item__icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+          <div class="contact-item__text">
+            <span class="contact-item__label">{{ 'contact.location_label' | translate }}</span>
+            <span class="contact-item__value">{{ location }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,184 @@
+.experience {
+  padding: 7rem 2rem;
+  background: var(--c-bg);
+  border-top: 1px solid var(--c-border);
+
+  @media (max-width: 768px) { padding: 5rem 1.25rem; }
+}
+
+.experience__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+// ── Lista editorial — fila por experiencia
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--c-border);
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--c-border);
+  transition: background var(--transition);
+
+  &:hover {
+    background: rgba(4, 102, 138, 0.025);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 2rem 1fr;
+    gap: 1.25rem;
+    padding: 2rem 0;
+  }
+}
+
+// Número de ítem
+.exp-item__index {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(4, 102, 138, 0.25);
+  letter-spacing: -0.02em;
+  padding-top: 0.25rem;
+  transition: color var(--transition);
+  flex-shrink: 0;
+
+  .exp-item:hover & { color: var(--c-accent); }
+}
+
+.exp-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+// Cabecera: tiempo | rol
+.exp-item__header {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+// Columna izquierda del header
+.exp-item__time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.15rem;
+}
+
+.exp-item__period {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-accent);
+  letter-spacing: 0.02em;
+}
+
+.exp-item__type {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  border: 1px solid var(--c-border);
+  border-radius: 100px;
+  padding: 0.15rem 0.6rem;
+  width: fit-content;
+  background: var(--c-surface);
+}
+
+// Columna derecha del header
+.exp-item__role {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.exp-item__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.exp-item__company {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--c-muted);
+}
+
+.exp-item__dot {
+  opacity: 0.3;
+}
+
+// Descripción
+.exp-item__desc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+
+  li {
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: var(--c-muted);
+    line-height: 1.65;
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--c-accent);
+      font-size: 0.7rem;
+      opacity: 0.5;
+      top: 0.05rem;
+    }
+  }
+}
+
+// Tags
+.exp-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  span {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--c-muted);
+    background: var(--c-bg);
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    padding: 0.18rem 0.55rem;
+    letter-spacing: 0.03em;
+  }
+}

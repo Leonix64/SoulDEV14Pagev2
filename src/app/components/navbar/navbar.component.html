@@ -1,0 +1,50 @@
+<header class="navbar" [class.scrolled]="scrolled">
+  <div class="navbar__inner">
+
+    <div class="navbar__logo" (click)="navigate('home')">
+      <span class="navbar__logo-name">Hugo Gurrola</span>
+      <span class="navbar__logo-title">Back-End & Data</span>
+    </div>
+
+    <nav class="navbar__links">
+      <a *ngFor="let link of navLinks" class="navbar__link" (click)="navigate(link.sectionId)">
+        {{ link.labelKey | translate }}
+      </a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="lang-toggle" (click)="langService.toggle()" aria-label="Switch language">
+        <span [class.active]="langService.isEnglish()">EN</span>
+        <span class="lang-toggle__sep">|</span>
+        <span [class.active]="!langService.isEnglish()">ES</span>
+      </button>
+
+      <a class="btn-cv" href="assets/cv/CV_Hugo_Gurrola.pdf" download
+        [attr.aria-label]="'nav.download_cv' | translate">
+        <ion-icon name="download-outline"></ion-icon>
+        <span>{{ 'nav.download_cv' | translate }}</span>
+      </a>
+
+      <button class="navbar__hamburger" (click)="toggleMobile()" aria-label="Menu">
+        <ion-icon [name]="mobileOpen ? 'close-outline' : 'menu-outline'"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <nav class="navbar__mobile" [class.open]="mobileOpen">
+    <a *ngFor="let link of navLinks" class="navbar__mobile-link" (click)="navigate(link.sectionId)">
+      {{ link.labelKey | translate }}
+    </a>
+    <div class="navbar__mobile-bottom">
+      <button class="lang-toggle" (click)="langService.toggle()">
+        <span [class.active]="langService.isEnglish()">EN</span>
+        <span class="lang-toggle__sep">|</span>
+        <span [class.active]="!langService.isEnglish()">ES</span>
+      </button>
+      <a class="btn-cv" href="assets/cv/CV_Hugo_Gurrola.pdf" download>
+        <ion-icon name="download-outline"></ion-icon>
+        <span>{{ 'nav.download_cv' | translate }}</span>
+      </a>
+    </div>
+  </nav>
+</header>

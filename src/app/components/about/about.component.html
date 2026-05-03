@@ -1,0 +1,64 @@
+<section id="about" class="about">
+  <div class="about__inner">
+
+    <div class="section-heading">
+      <span class="section-heading__num">01</span>
+      <div class="section-heading__right">
+        <div class="section-heading__rule"></div>
+        <span class="section-heading__label">{{ 'about.section_title' | translate }}</span>
+      </div>
+    </div>
+    <h2 class="section-title">{{ 'about.heading' | translate }}</h2>
+
+    <!-- Contenido principal: párrafo + info rápida | educación -->
+    <div class="about__content">
+
+      <div class="about__left">
+        <p class="about__paragraph">{{ 'about.paragraph' | translate }}</p>
+
+        <ul class="about__quick">
+          <li class="about__quick-item">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>{{ 'about.location' | translate }}</span>
+          </li>
+          <li class="about__quick-item">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <span>{{ 'about.status' | translate }}</span>
+          </li>
+          <li class="about__quick-item">
+            <ion-icon name="logo-github"></ion-icon>
+            <a href="https://github.com/HugoGurrola" target="_blank" rel="noopener">
+              {{ 'about.github' | translate }}
+            </a>
+          </li>
+          <li class="about__quick-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:hugogurrola49@gmail.com">
+              {{ 'about.email' | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Educación -->
+      <div class="about__right">
+        <h3 class="about__edu-title">
+          <ion-icon name="school-outline"></ion-icon>
+          {{ 'education.section_title' | translate }}
+        </h3>
+        <div class="about__edu-list">
+          <div class="about__edu-item" *ngFor="let edu of education">
+            <div class="about__edu-degree">{{ edu.degreeKey | translate }}</div>
+            <div class="about__edu-institution">{{ edu.institution }}</div>
+            <div class="about__edu-meta">
+              <span>{{ edu.period }}</span>
+              <span class="about__edu-sep">·</span>
+              <span>{{ edu.location }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

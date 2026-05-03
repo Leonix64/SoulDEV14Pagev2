@@ -1,0 +1,75 @@
+<section id="home" class="hero">
+  <div class="hero__inner">
+    <div class="hero__bento">
+
+      <!-- ── Celda principal: nombre, roles, bio, CTAs -->
+      <div class="bento-cell bento-main">
+        <span class="hero__eyebrow">{{ 'hero.greeting' | translate }}</span>
+        <h1 class="hero__name">{{ 'hero.name' | translate }}</h1>
+
+        <div class="hero__roles">
+          <div class="hero__role-primary" *ngIf="roles.length">{{ roles[0] }}</div>
+          <div class="hero__role-tags" *ngIf="roles.length > 1">
+            <span class="hero__role-tag" *ngFor="let role of roles | slice:1">{{ role }}</span>
+          </div>
+        </div>
+
+        <p class="hero__subtitle">{{ 'hero.subtitle' | translate }}</p>
+
+        <div class="hero__ctas">
+          <button class="btn-primary" (click)="scrollToSection.emit('projects')">
+            {{ 'hero.cta_projects' | translate }}
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+          <button class="btn-ghost" (click)="scrollToSection.emit('contact')">
+            {{ 'hero.cta_contact' | translate }}
+          </button>
+        </div>
+      </div>
+
+      <!-- ── Celda estado: disponible + ubicación -->
+      <div class="bento-cell bento-status">
+        <div class="bento-status__dot"></div>
+        <p class="bento-status__label">{{ 'hero.open_to_work' | translate }}</p>
+        <p class="bento-status__location">
+          <ion-icon name="location-outline"></ion-icon>
+          Durango, Mexico
+        </p>
+      </div>
+
+      <!-- ── Celda stats: 3 números -->
+      <div class="bento-cell bento-stats">
+        <div class="bento-stat">
+          <span class="bento-stat__num">2+</span>
+          <span class="bento-stat__label">{{ 'about.stat_experience' | translate }}</span>
+        </div>
+        <div class="bento-stat__sep"></div>
+        <div class="bento-stat">
+          <span class="bento-stat__num">6+</span>
+          <span class="bento-stat__label">{{ 'about.stat_projects' | translate }}</span>
+        </div>
+        <div class="bento-stat__sep"></div>
+        <div class="bento-stat">
+          <span class="bento-stat__num">10+</span>
+          <span class="bento-stat__label">{{ 'about.stat_tech' | translate }}</span>
+        </div>
+      </div>
+
+      <!-- ── Celda tech: core stack -->
+      <div class="bento-cell bento-tech">
+        <span class="bento-tech__eyebrow">Core Stack</span>
+        <div class="bento-tech__list">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Python</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="hero__scroll" (click)="scrollToSection.emit('about')" aria-label="Scroll down">
+    <ion-icon name="chevron-down"></ion-icon>
+  </button>
+</section>

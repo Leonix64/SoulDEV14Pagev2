@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about":       "Sobre mí",
+    "experience":  "Experiencia",
+    "projects":    "Proyectos",
+    "stack":       "Stack",
+    "contact":     "Contacto",
+    "download_cv": "Descargar CV"
+  },
+
+  "hero": {
+    "greeting":   "Hola, soy",
+    "name":       "Hugo Gurrola",
+    "roles": [
+      "Desarrollador Back-End",
+      "Analista de Datos",
+      "Ingeniero Java",
+      "Especialista en Bases de Datos"
+    ],
+    "subtitle":   "Ingeniero en Software especializado en sistemas back-end escalables con Java, Python y MySQL. Durango, México.",
+    "cta_projects": "Ver proyectos",
+    "cta_contact":  "Contáctame",
+    "open_to_work": "Disponible para proyectos"
+  },
+
+  "about": {
+    "section_title": "Sobre mí",
+    "heading": "Mi Historia",
+    "paragraph": "Ingeniero en Software egresado de la UNIPOLI con experiencia en Back-End, análisis de datos y arquitecturas escalables. Me especializo en Java con Spring Boot y Python, optimización de MySQL y análisis de grandes volúmenes de datos. Construyo sistemas robustos con código limpio y diseño eficiente de bases de datos.",
+    "location":  "Durango, México",
+    "status":    "Disponible para full-time y freelance",
+    "github":    "github.com/HugoGurrola",
+    "email":     "hugogurrola49@gmail.com",
+    "stat_experience": "años de experiencia",
+    "stat_projects":   "proyectos completados",
+    "stat_tech":       "tecnologías dominadas"
+  },
+
+  "experience": {
+    "section_title": "Experiencia",
+    "heading": "Mi Experiencia",
+    "types": {
+      "freelance":   "Freelance",
+      "full-time":   "Tiempo completo",
+      "internship":  "Practicante"
+    },
+    "worknest": {
+      "title": "Desarrollador Back-End",
+      "desc1": "Diseñé y desarrollé arquitecturas escalables con Spring Boot y Goliant.",
+      "desc2": "Administré y optimicé base de datos MySQL, reduciendo tiempos de consulta.",
+      "desc3": "Documenté procesos y gestioné reuniones bajo metodología Scrum.",
+      "desc4": "Contribuí al diseño funcional del e-commerce."
+    },
+    "helguera": {
+      "title": "Desarrollador Back-End",
+      "desc1": "Construí el back-end para sistema e-commerce con gestión de inventario y panel admin.",
+      "desc2": "Diseñé e implementé esquema de base de datos relacional con MySQL.",
+      "desc3": "Desarrollé APIs REST para catálogo de productos, pedidos y gestión de usuarios."
+    },
+    "donponpeyo": {
+      "title": "Desarrollador Back-End",
+      "desc1": "Desarrollé sistema de gestión para panadería con MySQL para inventario y ventas.",
+      "desc2": "Modelé procesos de negocio e implementé servicios REST con Spring Boot.",
+      "desc3": "Construí módulo de reportes para ventas diarias y niveles de stock."
+    }
+  },
+
+  "education": {
+    "section_title": "Educación",
+    "unipoli": {
+      "degree": "Ingeniería en Software"
+    }
+  },
+
+  "projects": {
+    "section_title": "Proyectos",
+    "heading": "Mis Proyectos",
+    "filter": {
+      "all":       "Todos",
+      "fullstack": "Full Stack",
+      "web":       "Web",
+      "mobile":    "Móvil",
+      "ai":        "IA / ML",
+      "tools":     "Herramientas",
+      "data":      "Datos"
+    },
+    "cta_github":   "Ver más en GitHub",
+    "private_repo": "Privado · NDA",
+    "worknest": {
+      "title": "WorkNest Platform",
+      "desc":  "Plataforma e-commerce escalable con Spring Boot, Goliant y MySQL optimizado. Gestiona inventario, usuarios y procesamiento de pedidos."
+    },
+    "rainflow": {
+      "title": "Rainflow Analytics",
+      "desc":  "Pipeline de análisis de datos climáticos para modelos predictivos. Procesa datos geográficos con Python y almacena resultados en MySQL."
+    },
+    "helguera": {
+      "title": "Helguera E-Commerce",
+      "desc":  "Sistema e-commerce completo con gestión de inventario, diseño de base de datos relacional y panel administrativo."
+    },
+    "donponpeyo": {
+      "title": "Don Ponpeyo",
+      "desc":  "Sistema de gestión para panadería con control de inventario y procesos. Back-End Spring Boot con modelado MySQL y reportes diarios."
+    }
+  },
+
+  "stack": {
+    "section_title": "Tech Stack",
+    "heading": "Mi Arsenal",
+    "backend":   "Back-End",
+    "databases": "Bases de datos",
+    "data":      "Datos y Análisis",
+    "devops":    "DevOps y Herramientas"
+  },
+
+  "contact": {
+    "section_title":  "Contacto",
+    "heading": "Hablemos",
+    "subtitle":       "Trabajemos juntos.",
+    "email_label":    "Correo",
+    "phone_label":    "Teléfono",
+    "github_label":   "GitHub",
+    "location_label": "Ubicación",
+    "location_value": "Durango, México",
+    "availability":   "Disponible para roles remotos y presenciales",
+    "cta_email":      "Enviar correo"
+  },
+
+  "footer": {
+    "built_with": "Construido con Angular & Ionic",
+    "rights":     "Hugo Gurrola. Todos los derechos reservados."
+  }
+}

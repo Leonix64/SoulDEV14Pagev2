@@ -1,0 +1,416 @@
+// ── Hero — Bento Grid Layout
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-bg);
+  padding: var(--nav-h) 2rem 4rem;
+  position: relative;
+}
+
+.hero__inner {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// ── Bento grid
+.hero__bento {
+  display: grid;
+  grid-template-columns: 1fr 264px;
+  grid-template-rows: auto auto auto;
+  gap: 0.8rem;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Base cell
+.bento-cell {
+  border-radius: 20px;
+  border: 1px solid var(--c-border);
+  padding: 2rem;
+  background: var(--c-surface);
+}
+
+// ── Main cell — spans all 3 rows in left column
+.bento-main {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: cell-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  // Monograma decorativo de fondo
+  &::after {
+    content: "HG";
+    position: absolute;
+    bottom: -3rem;
+    right: -1rem;
+    font-family: var(--font-display);
+    font-size: 14rem;
+    font-weight: 700;
+    color: rgba(4, 102, 138, 0.045);
+    line-height: 1;
+    letter-spacing: -0.06em;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  @media (max-width: 860px) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    padding: 2.25rem;
+    order: 2;
+  }
+
+  @media (max-width: 520px) {
+    grid-column: 1;
+    grid-row: auto;
+    order: 2;
+  }
+}
+
+@keyframes cell-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--c-muted);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--c-text);
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.hero__roles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hero__role-primary {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--c-accent);
+  letter-spacing: -0.01em;
+}
+
+.hero__role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.hero__role-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--c-muted);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 100px;
+  padding: 0.22rem 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--c-muted);
+  line-height: 1.85;
+  max-width: 480px;
+  margin: 0;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.5rem;
+
+  @media (max-width: 380px) { flex-direction: column; }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: var(--c-accent);
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(4, 102, 138, 0.18);
+  }
+
+  ion-icon { font-size: 1rem; transition: transform 0.25s; }
+  &:hover ion-icon { transform: translateX(2px); }
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--c-muted);
+  background: transparent;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+
+  &:hover {
+    color: var(--c-accent);
+    border-color: rgba(4, 102, 138, 0.3);
+    background: var(--c-accent-dim);
+  }
+}
+
+// ── Status cell — accent azul
+.bento-status {
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--c-accent);
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 120px;
+  animation: cell-in 0.5s 0.06s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @media (max-width: 860px) {
+    grid-column: 1;
+    grid-row: 1;
+    order: 1;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (max-width: 520px) {
+    grid-column: 1;
+    grid-row: auto;
+    order: 1;
+  }
+}
+
+.bento-status__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+  animation: pulse-green 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.25); }
+  50%       { box-shadow: 0 0 0 4px rgba(74, 222, 128, 0); }
+}
+
+.bento-status__label {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  flex: 1;
+}
+
+.bento-status__location {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  margin-top: auto;
+
+  ion-icon { font-size: 0.85rem; }
+
+  @media (max-width: 860px) { margin-top: 0; }
+}
+
+// ── Stats cell
+.bento-stats {
+  grid-column: 2;
+  grid-row: 2;
+  background: var(--c-bg);
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  gap: 0;
+  animation: cell-in 0.5s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @media (max-width: 860px) {
+    grid-column: 2;
+    grid-row: 1;
+    order: 1;
+  }
+
+  @media (max-width: 520px) {
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+  }
+}
+
+.bento-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.bento-stat__sep {
+  width: 1px;
+  height: 36px;
+  background: var(--c-border);
+  flex-shrink: 0;
+}
+
+.bento-stat__num {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.bento-stat__label {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 400;
+  color: var(--c-muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+// ── Tech cell
+.bento-tech {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  animation: cell-in 0.5s 0.14s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @media (max-width: 860px) {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    order: 4;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (max-width: 520px) {
+    grid-column: 1;
+    grid-row: auto;
+    order: 4;
+  }
+}
+
+.bento-tech__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+.bento-tech__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  span {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--c-accent);
+    background: var(--c-accent-dim);
+    border: 1px solid rgba(4, 102, 138, 0.2);
+    border-radius: 8px;
+    padding: 0.3rem 0.75rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+// ── Scroll hint
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--c-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-muted);
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  animation: bounce-subtle 2.5s ease-in-out infinite;
+
+  &:hover {
+    color: var(--c-accent);
+    border-color: rgba(4, 102, 138, 0.3);
+    background: var(--c-accent-dim);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(3px); }
+}

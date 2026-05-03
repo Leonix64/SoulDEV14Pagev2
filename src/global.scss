@@ -32,6 +32,60 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
+/* Dark mode disabled — light theme only */
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/* @import '@ionic/angular/css/palettes/dark.system.css'; */
+
+// ── GLASSHAVEN-style editorial section heading — shared across all sections
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+.section-heading__num {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: rgba(4, 102, 138, 0.12);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.section-heading__right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-top: 0.6rem;
+  flex: 1;
+}
+
+.section-heading__rule {
+  height: 1px;
+  background: var(--c-border);
+  width: 100%;
+}
+
+.section-heading__label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+
+// ── GLASSHAVEN-style large section title
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--c-text);
+  margin: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}

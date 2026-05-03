@@ -1,0 +1,72 @@
+<section id="projects" class="projects">
+  <div class="projects__inner">
+
+    <div class="section-heading">
+      <span class="section-heading__num">04</span>
+      <div class="section-heading__right">
+        <div class="section-heading__rule"></div>
+        <span class="section-heading__label">{{ 'projects.section_title' | translate }}</span>
+      </div>
+    </div>
+    <h2 class="section-title">{{ 'projects.heading' | translate }}</h2>
+
+    <!-- Filtros -->
+    <div class="projects__filters">
+      <button
+        *ngFor="let f of filters"
+        class="filter-pill"
+        [class.filter-pill--active]="activeFilter === f.key"
+        (click)="setFilter(f.key)">
+        {{ f.labelKey | translate }}
+      </button>
+    </div>
+
+    <!-- Lista de proyectos — cada uno una fila full-width -->
+    <div class="proj-list">
+      <div class="proj-row"
+           *ngFor="let p of filtered; let i = index"
+           [class.proj-row--featured]="p.featured">
+
+        <span class="proj-row__num">{{ (i + 1).toString().padStart(2, '0') }}</span>
+
+        <div class="proj-row__main">
+          <div class="proj-row__top">
+            <h3 class="proj-row__title">{{ p.titleKey | translate }}</h3>
+            <div class="proj-row__meta">
+              <span class="proj-row__category">{{ 'projects.filter.' + p.category | translate }}</span>
+              <span class="proj-row__year">{{ p.year }}</span>
+              <span class="proj-row__featured-badge" *ngIf="p.featured">
+                <ion-icon name="flash-outline"></ion-icon> Featured
+              </span>
+            </div>
+          </div>
+          <p class="proj-row__desc">{{ p.descriptionKey | translate }}</p>
+          <div class="proj-row__tags">
+            <span *ngFor="let tag of p.tags">{{ tag }}</span>
+          </div>
+        </div>
+
+        <div class="proj-row__action">
+          <a *ngIf="p.sourceUrl" [href]="p.sourceUrl" target="_blank" rel="noopener noreferrer"
+             class="proj-row__link" (click)="$event.stopPropagation()">
+            <ion-icon name="logo-github"></ion-icon>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </a>
+          <span *ngIf="!p.sourceUrl" class="proj-row__private">
+            <ion-icon name="shield-checkmark"></ion-icon>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="projects__cta">
+      <a href="https://github.com/HugoGurrola" target="_blank" rel="noopener noreferrer" class="cta-link">
+        <ion-icon name="logo-github"></ion-icon>
+        <span>{{ 'projects.cta_github' | translate }}</span>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </a>
+    </div>
+
+  </div>
+</section>

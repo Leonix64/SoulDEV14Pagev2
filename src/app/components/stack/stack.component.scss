@@ -1,0 +1,105 @@
+.stack {
+  padding: 7rem 2rem;
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+
+  @media (max-width: 768px) { padding: 5rem 1.25rem; }
+}
+
+.stack__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+// ── 4-column GLASSHAVEN grid
+.stack__categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--c-border);
+  border-left: 1px solid var(--c-border);
+
+  @media (max-width: 900px)  { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px)  { grid-template-columns: 1fr; }
+}
+
+.stack__category {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  transition: background 0.35s ease;
+
+  &:hover { background: rgba(4, 102, 138, 0.025); }
+}
+
+// Large editorial number — GLASSHAVEN's "01 / 02 / 03 / 04"
+.stack__cat-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  transition: opacity var(--transition);
+
+  .stack__category:hover & { opacity: 0.75; }
+}
+
+.stack__cat-divider {
+  height: 1px;
+  background: var(--c-border);
+  margin-bottom: 1.25rem;
+}
+
+.stack__cat-title {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-text);
+  margin: 0 0 1.75rem;
+}
+
+// Skills as a clean vertical list — no chips
+.stack__skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.stack__skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--c-muted);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--c-border);
+  transition: color var(--transition);
+
+  &:last-child { border-bottom: none; padding-bottom: 0; }
+
+  ion-icon {
+    font-size: 1rem;
+    color: var(--c-accent);
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity var(--transition);
+  }
+
+  .stack__category:hover & {
+    color: var(--c-text);
+    ion-icon { opacity: 1; }
+  }
+}
